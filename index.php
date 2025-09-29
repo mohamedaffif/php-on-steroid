@@ -7,19 +7,26 @@
     <title>Document</title>
  </head>
  <body>
-   <form action="index.php" method="POST">
-    <lable>Username:</lable><br>
-    <input type="text" name="username"></br>
-    <lable>password:</lable><br>
-    <input type="password" name="password"></br>
-    <input type="submit" value="submit">
-</form>
+   <form action="index.php" method="post">
+      <label>Quantity:</label><br>
+      <input type="text" name="quantity"><br>
+      <input type="submit" value="total">
+   </form>
 
  </body>
  </html>
 
  <?php
+ $itme = "pizza";
+ $price = 5.99;
+ $quantity = $_POST['quantity'];
+ $total = null;
+
+ $total = $price * $quantity;
+
+ echo"You have ordered {$quantity} x {$itme}/s <br>";
+ echo"Your total is: \${$total}"; 
+
+
  
- echo "{$_POST['username']} <br>";
- echo "{$_POST['password']} <br>";
  ?>
