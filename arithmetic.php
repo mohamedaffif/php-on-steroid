@@ -24,6 +24,7 @@ $counter = $counter - 1;
 $counter--;
 echo $counter . "<br>";
 // Operators Precedence
+//BODMAS
 // ()
 //  ** 
 // *, /, %
