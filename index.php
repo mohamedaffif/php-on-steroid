@@ -7,12 +7,13 @@
     <title>Document</title>
  </head>
  <body>
-   <form action="index.php" method="post">
-      <label>Enter your country</label><br>
-      <input type="text" name="country" placeholder="type country"><br>
-      <!-- <input type="password" name="password" placeholder="Password"> -->
-      <input type="submit" value="Submit">
- </form>
+   <form action="index.php" method="post" >
+      <label>username</label>
+      <input type="text" name="username" placeholder="Enter username" autocomplete="off">
+      <label>password</label>
+      <input type="password" name="password" placeholder="Enter password" autocomplete="off">
+      <input type="submit" name="login" value="Log in">
+   </form>
    
 
  </body>
@@ -57,16 +58,16 @@
 //   echo"You are not eligible to vote.";
 
 // associative array = an array made of key-value pairs
-     $capitals = array(
-        "USA" => "Washington, D.C.",
-        "France" => "Paris",
-        "Germany" => "Berlin",
-        "Italy" => "Rome"
-     );
+   //   $capitals = array(
+   //      "USA" => "Washington, D.C.",
+   //      "France" => "Paris",
+   //      "Germany" => "Berlin",
+   //      "Italy" => "Rome"
+   //   );
 
-     $capital = $capitals[$_POST['country']];
+   //   $capital = $capitals[$_POST['country']];
 
-     echo"the capital is  {$capital}";
+   //   echo"the capital is  {$capital}";
 
    //   $capital = array_values($capitals);
    //   foreach($capital as $country){
@@ -78,4 +79,35 @@
    //   foreach($capitals as $country => $capital){
    //      echo "<p>The capital of $country is $capital.</p>";
    //   }
+
+   // $username = true;
+
+   // if(empty($username)){
+   //    echo " This variable is empty";
+
+   // } else {
+   //    echo"This variable is not empty";
+   // }
+   // if(isset($username)){
+   //    echo " This variable is set";
+
+   // } else {
+   //    echo"This variable is not set";
+   // }
+
+   foreach($_POST as $key => $value){
+      echo "<p>$key : $value</p>";
+   }
+
+   // if(isset($_POST['login'])){
+   //    $username = $_POST['username'];
+   //    $password = $_POST['password'];
+
+   //    if(!empty($username) && !empty($password)){
+   //       echo "Hello {$username}";
+   //       // echo "Username: $username <br> Password: $password";
+   //    } else {
+   //       echo "All fields are required.";
+   //    }
+   // }
  ?>
