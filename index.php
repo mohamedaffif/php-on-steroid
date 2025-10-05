@@ -7,9 +7,11 @@
     <title>Document</title>
  </head>
  <body>
-
-
-
+   <form action="index.php" method="post">
+      <label>Enter your country</label><br>
+      <input type="text" name="country" placeholder="type country"><br>
+      <!-- <input type="password" name="password" placeholder="Password"> -->
+      <input type="submit" value="Submit">
  </form>
    
 
@@ -46,12 +48,34 @@
 // }
 
 // LOGICAL OPERATORS
-$age = 25;
-$citizen = false;
+// $age = 25;
+// $citizen = false;
 
-if($age >= 18 && $citizen ){
-  echo"You are eligible to vote.";
-} else {
-  echo"You are not eligible to vote.";
-}
+// if($age >= 18 && $citizen ){
+//   echo"You are eligible to vote.";
+// } else {
+//   echo"You are not eligible to vote.";
+
+// associative array = an array made of key-value pairs
+     $capitals = array(
+        "USA" => "Washington, D.C.",
+        "France" => "Paris",
+        "Germany" => "Berlin",
+        "Italy" => "Rome"
+     );
+
+     $capital = $capitals[$_POST['country']];
+
+     echo"the capital is  {$capital}";
+
+   //   $capital = array_values($capitals);
+   //   foreach($capital as $country){
+   //      echo "<p>$country</p>";
+   //   };
+
+   //   echo $capitals["Italy"];
+   //   echo array_keys($capitals)[2];
+   //   foreach($capitals as $country => $capital){
+   //      echo "<p>The capital of $country is $capital.</p>";
+   //   }
  ?>
