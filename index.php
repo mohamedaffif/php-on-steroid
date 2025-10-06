@@ -19,26 +19,26 @@
  </html>
 
  <?php
- if(isset($_POST['confirm'])){
-   $credit_card = "null";
+//  if(isset($_POST['confirm'])){
+//    $credit_card = "null";
 
-   if(isset($_POST['credit_card'])){
-      $credit_card = $_POST['credit_card'];
-      // echo $credit_card;
+//    if(isset($_POST['credit_card'])){
+//       $credit_card = $_POST['credit_card'];
+//       // echo $credit_card;
 
-   } 
-   if($credit_card == "visa"){
-      echo "<p>You selected Visa.</p>";
-   } elseif($credit_card == "mastercard"){
-      echo "<p>You selected MasterCard.</p>";
-   } elseif($credit_card == "American Express"){
-      echo "<p>You selected American Express.</p>";
-   } else {
-      echo "<p>Please select a credit card.</p>";
-   }
+//    } 
+//    if($credit_card == "visa"){
+//       echo "<p>You selected Visa.</p>";
+//    } elseif($credit_card == "mastercard"){
+//       echo "<p>You selected MasterCard.</p>";
+//    } elseif($credit_card == "American Express"){
+//       echo "<p>You selected American Express.</p>";
+//    } else {
+//       echo "<p>Please select a credit card.</p>";
+//    }
 
 
- };
+//  };
 //  $age = 0;
 //  if($age >= 18){
 //     echo "You are eligible to vote.";
