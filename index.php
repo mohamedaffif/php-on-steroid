@@ -8,11 +8,10 @@
  </head>
  <body>
    <form action="index.php" method="post" >
-      <label>username</label>
-      <input type="text" name="username" placeholder="Enter username" autocomplete="off">
-      <label>password</label>
-      <input type="password" name="password" placeholder="Enter password" autocomplete="off">
-      <input type="submit" name="login" value="Log in">
+     <input type="radio" name="credit_card" value="visa" > Visa <br>
+     <input type="radio" name="credit_card" value="mastercard" > MasterCard <br>
+     <input type="radio" name="credit_card" value="American Express" > American Express <br>
+     <input type="submit" name="confirm" value="Confirm" >
    </form>
    
 
@@ -20,7 +19,26 @@
  </html>
 
  <?php
+ if(isset($_POST['confirm'])){
+   $credit_card = "null";
 
+   if(isset($_POST['credit_card'])){
+      $credit_card = $_POST['credit_card'];
+      // echo $credit_card;
+
+   } 
+   if($credit_card == "visa"){
+      echo "<p>You selected Visa.</p>";
+   } elseif($credit_card == "mastercard"){
+      echo "<p>You selected MasterCard.</p>";
+   } elseif($credit_card == "American Express"){
+      echo "<p>You selected American Express.</p>";
+   } else {
+      echo "<p>Please select a credit card.</p>";
+   }
+
+
+ };
 //  $age = 0;
 //  if($age >= 18){
 //     echo "You are eligible to vote.";
@@ -95,9 +113,9 @@
    //    echo"This variable is not set";
    // }
 
-   foreach($_POST as $key => $value){
-      echo "<p>$key : $value</p>";
-   }
+   // foreach($_POST as $key => $value){
+   //    echo "<p>$key : $value</p>";
+   // }
 
    // if(isset($_POST['login'])){
    //    $username = $_POST['username'];
