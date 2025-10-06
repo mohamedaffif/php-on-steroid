@@ -8,10 +8,11 @@
  </head>
  <body>
    <form action="index.php" method="post" >
-     <input type="radio" name="credit_card" value="visa" > Visa <br>
-     <input type="radio" name="credit_card" value="mastercard" > MasterCard <br>
-     <input type="radio" name="credit_card" value="American Express" > American Express <br>
-     <input type="submit" name="confirm" value="Confirm" >
+     <input type="checkbox" name="foods[]" value="Pizza"/> Pizza <br>
+     <input type="checkbox" name="foods[]" value="Hamburger"/> Hamburger <br>
+     <input type="checkbox" name="foods[]" value="Hotdog"/> Hotdog <br>
+     <input type="checkbox" name="foods[]" value="Taco"/> Taco <br>
+     <input type="submit" name="submit"/>
    </form>
    
 
@@ -19,6 +20,40 @@
  </html>
 
  <?php
+    if(isset($_POST['submit'])){
+   
+      $foods = $_POST["foods"] ;
+      foreach($foods as $food){
+         echo "<p>You like $food.</p>";
+    }
+   }
+
+//  if(isset($_POST['submit'])){
+//    if(isset($_POST['pizza'])){
+//       echo "<p>You like Pizza.</p>";
+//    }
+//    if(isset($_POST['hamburger'])){
+//       echo "<p>You like Hamburger.</p>";
+//    }
+//    if(isset($_POST['hotdog'])){
+//       echo "<p>You like Hotdog.</p>";
+//    }
+//    if(isset($_POST['taco'])){
+//       echo "<p>You  like Taco.</p>";
+//    }
+//    if(empty($_POST['pizza'])){
+//       echo "<p>You DON'T like Pizza.</p>";
+//    }
+//    if(empty($_POST['hamburger'])){
+//       echo "<p>You DON'T like Hamburger.</p>";
+//    }
+//    if(empty($_POST['hotdog'])){
+//       echo "<p>You DON'T like Hotdog.</p>";
+//    }
+//    if(empty($_POST['taco'])){
+//       echo "<p>You DON'T like Taco.</p>";
+//    }
+//  }
 //  if(isset($_POST['confirm'])){
 //    $credit_card = "null";
 
