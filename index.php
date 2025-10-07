@@ -9,9 +9,9 @@
  <body>
    <form action="index.php" method="post" >
      <input type="checkbox" name="foods[]" value="Pizza"/> Pizza <br>
-     <input type="checkbox" name="foods[]" value="Hamburger"/> Hamburger <br>
-     <input type="checkbox" name="foods[]" value="Hotdog"/> Hotdog <br>
-     <input type="checkbox" name="foods[]" value="Taco"/> Taco <br>
+     <!-- <input type="checkbox" name="foods[]" value="Hamburger"/> Hamburger <br> -->
+     <!-- <input type="checkbox" name="foods[]" value="Hotdog"/> Hotdog <br>
+     <input type="checkbox" name="foods[]" value="Taco"/> Taco <br> -->
      <input type="submit" name="submit"/>
    </form>
    
@@ -20,13 +20,60 @@
  </html>
 
  <?php
-    if(isset($_POST['submit'])){
+
+ $username = array("Bro", "the", "nune");
+ $phone = "123-456-7890";
+//  $username = strtolower($username);
+//  $username = strtoupper($username);
+//  $username = trim($username);
+//  $username = str_pad($username,20,"0");
+// $phone = str_replace("-","",$phone);
+// $username = strrev($username);
+// $username = str_shuffle($username);
+// $equals = strcmp($username, "Bro nune");
+// $count = strlen($phone);
+// $index = strpos($username, " ");
+// $index = substr($phone, 0,3);
+// $first_name = substr($username, 0,3);
+// $last_name = substr($username, 4,8);
+
+$username = implode(" ", $username);
+echo $username;
+// foreach($full_name as $name){
+//    echo "<p>$name</p>";
+// }
+
+// echo $count;
+  // echo $phone;
+  // echo $equals;
+
+//  echo $username;
+
+//  function hypotenuse($a, $b){
+//    $c = sqrt($a**2 + $b**2);
+//    return $c;
+//  }
+
+//   echo hypotenuse(3,4);
+
+ // functions 
+//  function is_even($number){
+//   $result = $number % 2 == 0 ? true : false;
+//   return $result;
+
+//  }
+//  echo is_even(6) ? "Even" : "Odd";
+//  function happy_birthday($first_name){
+//    echo "Hello {$first_name}";
+//  }
+//  happy_birthday("Jazeer");
+  //   if(isset($_POST['submit'])){
    
-      $foods = $_POST["foods"] ;
-      foreach($foods as $food){
-         echo "<p>You like $food.</p>";
-    }
-   }
+  //     $foods = $_POST["foods"] ;
+  //     foreach($foods as $food){
+  //        echo "<p>You like $food.</p>";
+  //   }
+  //  }
 
 //  if(isset($_POST['submit'])){
 //    if(isset($_POST['pizza'])){
